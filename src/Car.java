@@ -1,4 +1,4 @@
-abstract class Car extends Garage{
+abstract class Car{
     private int regNr;
     private String brand;
     private String model;
