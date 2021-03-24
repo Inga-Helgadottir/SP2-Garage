@@ -1,10 +1,13 @@
 import java.util.ArrayList;
 
 public class Garage {
+    private String name;
     private ArrayList<Car> cars = new ArrayList<Car>();
 
-    public Garage() {
+    public Garage(String name) {
+        this.name = name;
     }
+
     public ArrayList<Car> addToArrayList(Car car1, Car car2, Car car3, Car car4, Car car5, Car car6) {
         cars.add(car1);
         cars.add(car2);
@@ -15,10 +18,12 @@ public class Garage {
         return cars;
     }
 
-    public void printAllCars(){
+    public String printAllCars(){
         for (Car c:cars) {
             System.out.println(c.toString());
+            return c.toString();
         }
+        return cars.toString();
     }
     public void calculateGreenFeedForCarpark(){
         //calculate all green charges for all cars
@@ -30,5 +35,12 @@ public class Garage {
             result += c.calculateGreenOwnershipTax();
         }
         System.out.println("res " + result);
+    }
+
+    @Override
+    public String toString() {
+        return name + "{" +
+                ", cars=" + printAllCars() + '\'' +
+                '}';
     }
 }
