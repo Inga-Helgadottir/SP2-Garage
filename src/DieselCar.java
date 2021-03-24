@@ -8,6 +8,28 @@ public class DieselCar extends Car{
         this.kmPrL = kmPrL;
     }
 
+    public double calculateGreenOwnershipTax() {
+        double sum = 0;
+        if(this.kmPrL <= 5){
+            sum = 10470 + 1390;//11860
+        }else if(this.kmPrL > 5 && this.kmPrL <= 10){
+            sum = 5500 + 2770;//8270
+
+        }else if(this.kmPrL > 10 && this.kmPrL <= 15){
+            sum = 2340 + 1850;//4190
+
+        }else if(this.kmPrL > 15 && this.kmPrL <= 20){
+            sum = 1050 + 1390;//2440
+
+        }else if(this.kmPrL > 20 && this.kmPrL < 50){
+            sum = 330 + 130;//460
+        }
+        if(!this.hasParticulateFilter){
+            sum += 1000;
+        }
+        return sum;
+    }
+
     public boolean isHasParticulateFilter() {
         return hasParticulateFilter;
     }
@@ -27,7 +49,12 @@ public class DieselCar extends Car{
     @Override
     public String toString() {
         return "DieselCar{" +
-                "hasParticulateFilter=" + hasParticulateFilter +
+                "regNr=" + getRegNr() +
+                ", brand=" + getBrand() +
+                ", model=" + getModel() +
+                ", year=" + getYear() +
+                ", nbrOfDoors=" + getNbrOfDoors() +
+                ", hasParticulateFilter=" + hasParticulateFilter +
                 ", kmPrL=" + kmPrL +
                 '}';
     }
