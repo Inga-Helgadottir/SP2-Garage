@@ -21,7 +21,7 @@ public class PetrolCar extends Car{
         }else if(this.kmPrL > 15 && this.kmPrL <= 20){
             sum = 1050;
 
-        }else if(this.kmPrL > 20 && this.kmPrL < 50){
+        }else if(this.kmPrL > 20 && this.kmPrL <= 50){
             sum = 330;
         }
         return sum;
