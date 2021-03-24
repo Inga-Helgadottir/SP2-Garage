@@ -19,9 +19,14 @@ public class Main {
         g.calculateGreenFeedForCarpark();
 
         /*
-            Problems
-                1.electric car problem
-                2.better way to add to arraylist
+            To do:
+                read over pdf again to check
+                try fixing problems with a clear head
+                go to class room and ask for help with
+
+                    Problems
+                        1.electric car problem
+                        2.better way to add to arraylist
          */
     }
 }
