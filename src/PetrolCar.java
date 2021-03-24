@@ -8,6 +8,25 @@ public class PetrolCar extends Car{
         this.kmPrL = kmPrL;
     }
 
+    public double calculateGreenOwnershipTax() {
+        double sum = 0;
+        if(this.kmPrL <= 5){
+            sum = 10470;
+        }else if(this.kmPrL > 5 && this.kmPrL <= 10){
+            sum = 5500;
+
+        }else if(this.kmPrL > 10 && this.kmPrL <= 15){
+            sum = 2340;
+
+        }else if(this.kmPrL > 15 && this.kmPrL <= 20){
+            sum = 1050;
+
+        }else if(this.kmPrL > 20 && this.kmPrL < 50){
+            sum = 330;
+        }
+        return sum;
+    }
+
     public int getOctane() {
         return octane;
     }
@@ -27,7 +46,12 @@ public class PetrolCar extends Car{
     @Override
     public String toString() {
         return "PetrolCar{" +
-                "octane=" + octane +
+                "regNr=" + getRegNr() +
+                ", brand=" + getBrand() +
+                ", model=" + getModel() +
+                ", year=" + getYear() +
+                ", nbrOfDoors=" + getNbrOfDoors() +
+                ", octane=" + getOctane() +
                 ", kmPrL=" + kmPrL +
                 '}';
     }
