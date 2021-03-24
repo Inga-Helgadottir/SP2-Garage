@@ -21,7 +21,7 @@ public class DieselCar extends Car{
         }else if(this.kmPrL > 15 && this.kmPrL <= 20){
             sum = 1050 + 1390;//2440
 
-        }else if(this.kmPrL > 20 && this.kmPrL < 50){
+        }else if(this.kmPrL > 20 && this.kmPrL <= 50){
             sum = 330 + 130;//460
         }
         if(!this.hasParticulateFilter){
