@@ -9,6 +9,28 @@ public class ElectricCar extends Car {
         this.maxKm = maxKm;
         this.whPrKm = whPrKm;
     }
+    public double calculateGreenOwnershipTax() {
+        double whPrKmKmPrL = 100 / (this.whPrKm / 91.25);
+        System.out.println("whPrKmKmPrL " + whPrKmKmPrL);
+        System.out.println("whPrKm " + this.whPrKm);
+        double sum = 0;
+        if(whPrKmKmPrL <= 5){
+            sum = 10470;
+        }else if(whPrKmKmPrL > 5 && whPrKmKmPrL <= 10){
+            sum = 5500;
+
+        }else if(whPrKmKmPrL > 10 && whPrKmKmPrL <= 15){
+            sum = 2340;
+
+        }else if(whPrKmKmPrL > 15 && whPrKmKmPrL <= 20){
+            sum = 1050;
+
+        }else if(whPrKmKmPrL > 20 && whPrKmKmPrL < 50){
+            sum = 330;
+        }
+        System.out.println("sum " + sum);
+        return sum;
+    }
 
     public int getBatteryCapacityKWh() {
         return batteryCapacityKWh;
@@ -37,6 +59,11 @@ public class ElectricCar extends Car {
     @Override
     public String toString() {
         return "ElectricCar{" +
+                "regNr=" + getRegNr() +
+                ", brand=" + getBrand() +
+                ", model=" + getModel() +
+                ", year=" + getYear() +
+                ", nbrOfDoors=" + getNbrOfDoors() +
                 "batteryCapacityKWh=" + batteryCapacityKWh +
                 ", maxKm=" + maxKm +
                 ", whPrKm=" + whPrKm +
