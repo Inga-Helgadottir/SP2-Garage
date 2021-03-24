@@ -1,4 +1,4 @@
-abstract class Car {
+abstract class Car extends Garage{
     private int regNr;
     private String brand;
     private String model;
@@ -12,6 +12,8 @@ abstract class Car {
         this.year = year;
         this.nbrOfDoors = nbrOfDoors;
     }
+
+    public abstract double calculateGreenOwnershipTax();
 
     public int getRegNr() {
         return regNr;
