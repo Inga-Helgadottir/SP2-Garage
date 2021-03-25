@@ -18,7 +18,8 @@ public class Garage {
         return cars;
     }
 
-    public void calculateGreenFeedForGarage(){
+    public void calculateGreenFeeForGarage(){
+        System.out.println("\ncalculating green fee for the entire garage");
         int result = 0;
         int size = cars.size();
         for (Car c:cars) {
@@ -32,17 +33,12 @@ public class Garage {
         System.out.println(" = " + result);
     }
 
-    public String printAllCars(){
+    public String toString(){
+        System.out.println(this.name + "{");
         for (int i = 0; i < cars.size(); i++) {
             System.out.println(cars.get(i).toString());
         }
+        System.out.println("}");
         return cars.toString();
-    }
-
-    @Override
-    public String toString() {
-        return name + "{" +
-                ", cars= " + printAllCars() + '\'' +
-                '}';
     }
 }
