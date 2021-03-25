@@ -20,7 +20,6 @@ public class Garage {
 
     public void calculateGreenFeedForGarage(){
         int result = 0;
-        System.out.println();
         int size = cars.size();
         for (Car c:cars) {
             if(c == cars.get(size-1)){
@@ -30,7 +29,7 @@ public class Garage {
             }
             result += c.calculateGreenOwnershipTax();
         }
-        System.out.println(" = res " + result);
+        System.out.println(" = " + result);
     }
 
     public String printAllCars(){
