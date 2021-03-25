@@ -11,7 +11,7 @@ public class Main {
 
         g.addToArrayList(d1, d2, p1, p2, e1, e2);
 
-        g.toString();
+        g.toString();//printer alle biler ud
 
         g.calculateGreenFeedForGarage();
     }
