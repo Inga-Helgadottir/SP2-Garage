@@ -36,7 +36,7 @@ public class Garage {
     public String toString(){
         System.out.println(this.name + "{");
         for (int i = 0; i < cars.size(); i++) {
-            System.out.println(cars.get(i).toString());
+            System.out.println("  " + cars.get(i).toString());
         }
         System.out.println("}");
         return cars.toString();
