@@ -12,8 +12,6 @@ public class ElectricCar extends Car {
     public double calculateGreenOwnershipTax() {
         double sum = 0;
         double whPrKmKmPrL = this.whPrKm / 91.25;
-//        System.out.println("whPrKm " + this.whPrKm);
-//        System.out.println("whPrKmKmPrL " + whPrKmKmPrL);
         if(whPrKmKmPrL <= 5){
             sum = 10470;
         }else if(whPrKmKmPrL > 5 && whPrKmKmPrL <= 10){
@@ -28,7 +26,6 @@ public class ElectricCar extends Car {
         }else if(whPrKmKmPrL > 20 && whPrKmKmPrL <= 50){
             sum = 330;
         }
-        System.out.println("sum " + sum);
         return sum;
     }
 
