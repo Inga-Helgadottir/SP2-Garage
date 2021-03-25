@@ -8,25 +8,11 @@ public class Main {
         Car e1 = new ElectricCar(3654, "brand5", "model5",2019, 5, 75, 160000, 118);
         Car e2 = new ElectricCar(3148, "brand6", "model6", 2012, 3, 75, 160000, 162);
         Garage g = new Garage("Jeff´s Garage");
-        //Er der en bedre måde at gøre det på???????????????????????????
-        //Måske en måde hvor man kan tilføje så mange som man vil
+
         g.addToArrayList(d1, d2, p1, p2, e1, e2);
 
-        //g.printAllCars();//remember to remove comment when problem is fixed
+        g.toString();
 
-        //der er et eller andet galt med udregningerne
-        //electric bilerne tæller 2 gange
-        g.calculateGreenFeedForCarpark();
-
-        /*
-            To do:
-                read over pdf again to check
-                try fixing problems with a clear head
-                go to class room and ask for help with
-
-                    Problems
-                        1.electric car problem
-                        2.better way to add to arraylist
-         */
+        g.calculateGreenFeedForGarage();
     }
 }
