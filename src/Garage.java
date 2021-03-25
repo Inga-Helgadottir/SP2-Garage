@@ -18,29 +18,32 @@ public class Garage {
         return cars;
     }
 
-    public String printAllCars(){
-        for (Car c:cars) {
-            System.out.println(c.toString());
-            return c.toString();
-        }
-        return cars.toString();
-    }
-    public void calculateGreenFeedForCarpark(){
-        //calculate all green charges for all cars
+    public void calculateGreenFeedForGarage(){
         int result = 0;
         System.out.println();
+        int size = cars.size();
         for (Car c:cars) {
-            System.out.println(c.toString());
-            System.out.println(c.calculateGreenOwnershipTax());
+            if(c == cars.get(size-1)){
+                System.out.print(c.calculateGreenOwnershipTax());
+            }else{
+                System.out.print(c.calculateGreenOwnershipTax() + " + ");
+            }
             result += c.calculateGreenOwnershipTax();
         }
-        System.out.println("res " + result);
+        System.out.println(" = res " + result);
+    }
+
+    public String printAllCars(){
+        for (int i = 0; i < cars.size(); i++) {
+            System.out.println(cars.get(i).toString());
+        }
+        return cars.toString();
     }
 
     @Override
     public String toString() {
         return name + "{" +
-                ", cars=" + printAllCars() + '\'' +
+                ", cars= " + printAllCars() + '\'' +
                 '}';
     }
 }
